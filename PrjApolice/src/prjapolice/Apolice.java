@@ -6,12 +6,19 @@ public class Apolice {
     private int idade;
     private float valorPremio;
     
+    /**
+     * Método imprimir() - método responsável por fazer a impressão dos dados
+     */
     public void imprimir(){
         System.out.println("Nome: " + getNomeSegurado());
         System.out.println("Idade: " + getIdade());
         System.out.println("Valor do Premio: " + getValorPremio());
     }
 
+    /**
+     * Método que retorna o nome do segurado da apólice
+     * @return nomeSegurado (atributo nome do segurado)
+     */
     public String getNomeSegurado() {
         return nomeSegurado;
     }

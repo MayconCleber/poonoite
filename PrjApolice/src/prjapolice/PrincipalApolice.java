@@ -1,8 +1,10 @@
 package prjapolice;
 
 public class PrincipalApolice {
-
+    
+ 
     public static void main(String[] args) {
+       
         //Instanciar um objeto do tipo Apolice
         Apolice apolice = new Apolice();
         //Atribuir valores aos campos (atributos)
