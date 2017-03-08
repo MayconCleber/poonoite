@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="br.faculdade.gerenciamentolivros.business">
+  <ClassDiagramComponents>
+    <Class name="EditoraBUS" package="br.faculdade.gerenciamentolivros.business" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="inserir" returnType="void" visibility="public">
+          <Argument type="Editora" name="obj"/>
+        </Method>
+        <Method name="alterar" returnType="void" visibility="public">
+          <Argument type="Editora" name="obj"/>
+        </Method>
+        <Method name="buscar" returnType="Editora" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="buscar" returnType="Editora" visibility="public">
+          <Argument type="String" name="chave"/>
+        </Method>
+        <Method name="excluir" returnType="void" visibility="public">
+          <Argument type="Editora" name="obj"/>
+        </Method>
+        <Method name="listar" returnType="List&lt;Editora&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="IBus" package="br.faculdade.gerenciamentolivros.business" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Methods>
+        <Method name="inserir" returnType="void" visibility="package">
+          <Argument type="T" name="obj"/>
+        </Method>
+        <Method name="alterar" returnType="void" visibility="package">
+          <Argument type="T" name="obj"/>
+        </Method>
+        <Method name="buscar" returnType="T" visibility="package">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="buscar" returnType="T" visibility="package">
+          <Argument type="String" name="chave"/>
+        </Method>
+        <Method name="excluir" returnType="void" visibility="package">
+          <Argument type="T" name="obj"/>
+        </Method>
+        <Method name="listar" returnType="List&lt;T&gt;" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Class name="LivroBUS" package="br.faculdade.gerenciamentolivros.business" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="inserir" returnType="void" visibility="public">
+          <Argument type="Livro" name="obj"/>
+        </Method>
+        <Method name="alterar" returnType="void" visibility="public">
+          <Argument type="Livro" name="obj"/>
+        </Method>
+        <Method name="buscar" returnType="Livro" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="buscar" returnType="Livro" visibility="public">
+          <Argument type="String" name="chave"/>
+        </Method>
+        <Method name="excluir" returnType="void" visibility="public">
+          <Argument type="Livro" name="obj"/>
+        </Method>
+        <Method name="listar" returnType="List&lt;Livro&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.faculdade.gerenciamentolivros.business.EditoraBUS" target="br.faculdade.gerenciamentolivros.business.IBus"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.faculdade.gerenciamentolivros.business.LivroBUS" target="br.faculdade.gerenciamentolivros.business.IBus"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

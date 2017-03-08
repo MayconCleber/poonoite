@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ProjetoAcampamento">
+  <ClassDiagramComponents>
+    <Class name="Acampamento" package="projetoacampamento" visibility="public" xPosition="105.0" yPosition="20.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="public"/>
+        <Field name="equipe" type="String" visibility="public"/>
+        <Field name="idade" type="int" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="imprimir" returnType="void" visibility="public"/>
+        <Method name="separarGrupo" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PrincipalAcampamento" package="projetoacampamento" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
