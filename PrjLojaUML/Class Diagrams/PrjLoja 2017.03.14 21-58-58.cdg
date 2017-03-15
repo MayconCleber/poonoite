@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="PrjLoja">
+  <ClassDiagramComponents>
+    <Class name="Equipamento" package="prjloja" visibility="public" xPosition="499.0" yPosition="60.0">
+      <Fields>
+        <Field name="equipamentoId" type="int" visibility="private"/>
+        <Field name="descricao" type="String" visibility="private"/>
+        <Field name="quantidade" type="int" visibility="private"/>
+        <Field name="valor" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getEquipamentoId" returnType="int" visibility="public"/>
+        <Method name="setEquipamentoId" returnType="void" visibility="public">
+          <Argument type="int" name="equipamentoId"/>
+        </Method>
+        <Method name="getDescricao" returnType="String" visibility="public"/>
+        <Method name="setDescricao" returnType="void" visibility="public">
+          <Argument type="String" name="descricao"/>
+        </Method>
+        <Method name="getQuantidade" returnType="int" visibility="public"/>
+        <Method name="setQuantidade" returnType="void" visibility="public">
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="getValor" returnType="double" visibility="public"/>
+        <Method name="setValor" returnType="void" visibility="public">
+          <Argument type="double" name="valor"/>
+        </Method>
+        <Method name="listarProduto" returnType="String" visibility="public"/>
+        <Method name="alterarValor" returnType="void" visibility="public">
+          <Argument type="double" name="valor"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="GerenciarEstoque" package="prjloja" visibility="public" xPosition="886.0" yPosition="60.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="comprar" returnType="void" visibility="public">
+          <Argument type="Equipamento" name="eq"/>
+          <Argument type="int" name="qtd"/>
+        </Method>
+        <Method name="vender" returnType="void" visibility="public">
+          <Argument type="Equipamento" name="eq"/>
+          <Argument type="int" name="qtd"/>
+        </Method>
+        <Method name="mostrarEstoque" returnType="void" visibility="public">
+          <Argument type="Equipamento" name="eq"/>
+        </Method>
+        <Method name="inventario" returnType="double" visibility="public">
+          <Argument type="Equipamento[]" name="equips"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LojaTeste" package="prjloja" visibility="public" xPosition="164.0" yPosition="60.0">
+      <Fields>
+        <Field name="equipamentos" type="Equipamento" visibility="private" isFinal="true"/>
+        <Field name="indice" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="execCadastro" returnType="void" visibility="public"/>
+        <Method name="execConsulta" returnType="void" visibility="public"/>
+        <Method name="execGerenciamento" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="equipamentos" source="prjloja.LojaTeste" target="prjloja.Equipamento" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="prjloja.GerenciarEstoque" target="prjloja.Equipamento" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
