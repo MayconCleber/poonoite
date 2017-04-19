@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Questao1">
+  <ClassDiagramComponents>
+    <Class name="Computador" package="questao1" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="idComp" type="int" visibility="private"/>
+        <Field name="descricao" type="String" visibility="private"/>
+        <Field name="valor" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getIdComp" returnType="int" visibility="public"/>
+        <Method name="setIdComp" returnType="void" visibility="public">
+          <Argument type="int" name="idComp"/>
+        </Method>
+        <Method name="getDescricao" returnType="String" visibility="public"/>
+        <Method name="setDescricao" returnType="void" visibility="public">
+          <Argument type="String" name="descricao"/>
+        </Method>
+        <Method name="getValor" returnType="double" visibility="public"/>
+        <Method name="setValor" returnType="void" visibility="public">
+          <Argument type="double" name="valor"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Questao1" package="questao1" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Usuario" package="questao1" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="idUsuario" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="nivel" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getIdUsuario" returnType="int" visibility="public"/>
+        <Method name="setIdUsuario" returnType="void" visibility="public">
+          <Argument type="int" name="idUsuario"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getNivel" returnType="int" visibility="public"/>
+        <Method name="setNivel" returnType="void" visibility="public">
+          <Argument type="int" name="nivel"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

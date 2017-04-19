@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ProjetoLivraria">
+  <ClassDiagramComponents>
+    <Class name="Cd" package="projetolivraria" visibility="public" xPosition="547.0" yPosition="435.0">
+      <Fields>
+        <Field name="artista" type="String" visibility="private"/>
+        <Field name="gravadora" type="String" visibility="private"/>
+        <Field name="paisOrigem" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getArtista" returnType="String" visibility="public"/>
+        <Method name="setArtista" returnType="void" visibility="public">
+          <Argument type="String" name="artista"/>
+        </Method>
+        <Method name="getGravadora" returnType="String" visibility="public"/>
+        <Method name="setGravadora" returnType="void" visibility="public">
+          <Argument type="String" name="gravadora"/>
+        </Method>
+        <Method name="getPaisOrigem" returnType="String" visibility="public"/>
+        <Method name="setPaisOrigem" returnType="void" visibility="public">
+          <Argument type="String" name="paisOrigem"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Dvd" package="projetolivraria" visibility="public" xPosition="313.0" yPosition="435.0">
+      <Fields>
+        <Field name="diretor" type="String" visibility="private"/>
+        <Field name="duracao" type="String" visibility="private"/>
+        <Field name="censura" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getDiretor" returnType="String" visibility="public"/>
+        <Method name="setDiretor" returnType="void" visibility="public">
+          <Argument type="String" name="diretor"/>
+        </Method>
+        <Method name="getDuracao" returnType="String" visibility="public"/>
+        <Method name="setDuracao" returnType="void" visibility="public">
+          <Argument type="String" name="duracao"/>
+        </Method>
+        <Method name="getCensura" returnType="String" visibility="public"/>
+        <Method name="setCensura" returnType="void" visibility="public">
+          <Argument type="String" name="censura"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="GerenciarLivraria" package="projetolivraria" visibility="public" xPosition="678.0" yPosition="-3.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Livro" package="projetolivraria" visibility="public" xPosition="92.0" yPosition="435.0">
+      <Fields>
+        <Field name="autor" type="String" visibility="private"/>
+        <Field name="editora" type="String" visibility="private"/>
+        <Field name="edicao" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getAutor" returnType="String" visibility="public"/>
+        <Method name="setAutor" returnType="void" visibility="public">
+          <Argument type="String" name="autor"/>
+        </Method>
+        <Method name="getEditora" returnType="String" visibility="public"/>
+        <Method name="setEditora" returnType="void" visibility="public">
+          <Argument type="String" name="editora"/>
+        </Method>
+        <Method name="getEdicao" returnType="String" visibility="public"/>
+        <Method name="setEdicao" returnType="void" visibility="public">
+          <Argument type="String" name="edicao"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Produto" package="projetolivraria" visibility="public" isAbstract="true" xPosition="288.0" yPosition="24.0">
+      <Fields>
+        <Field name="descricao" type="String" visibility="private"/>
+        <Field name="genero" type="String" visibility="private"/>
+        <Field name="estoqueDisponivel" type="int" visibility="private"/>
+        <Field name="precoCusto" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getDescricao" returnType="String" visibility="public"/>
+        <Method name="setDescricao" returnType="void" visibility="public">
+          <Argument type="String" name="descricao"/>
+        </Method>
+        <Method name="getGenero" returnType="String" visibility="public"/>
+        <Method name="setGenero" returnType="void" visibility="public">
+          <Argument type="String" name="genero"/>
+        </Method>
+        <Method name="getEstoqueDisponivel" returnType="int" visibility="public"/>
+        <Method name="setEstoqueDisponivel" returnType="void" visibility="public">
+          <Argument type="int" name="estoqueDisponivel"/>
+        </Method>
+        <Method name="getPrecoCusto" returnType="double" visibility="public"/>
+        <Method name="setPrecoCusto" returnType="void" visibility="public">
+          <Argument type="double" name="precoCusto"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="projetolivraria.Cd" target="projetolivraria.Produto"/>
+    <IsRelation name="is" source="projetolivraria.Livro" target="projetolivraria.Produto"/>
+    <IsRelation name="is" source="projetolivraria.Dvd" target="projetolivraria.Produto"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
