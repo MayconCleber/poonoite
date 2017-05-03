@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="QuestaoDiscursiva3Enade2014">
+  <ClassDiagramComponents>
+    <Class name="Artigo" package="questaodiscursiva3enade2014" visibility="public" xPosition="678.0" yPosition="30.0">
+      <Fields>
+        <Field name="titulo" type="String" visibility="public"/>
+        <Field name="nomeAutor" type="String" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Edicao" package="questaodiscursiva3enade2014" visibility="public" xPosition="329.0" yPosition="58.0">
+      <Fields>
+        <Field name="numEdicao" type="int" visibility="public"/>
+        <Field name="volumeEdicao" type="String" visibility="public"/>
+        <Field name="dataEdicao" type="Date" visibility="public"/>
+        <Field name="revista" type="Revista" visibility="public"/>
+        <Field name="listaArtigo" type="List&lt;Artigo&gt;" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="adicionarArtigo" returnType="boolean" visibility="public">
+          <Argument type="Artigo" name="art"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="QuestaoDiscursiva3Enade2014" package="questaodiscursiva3enade2014" visibility="public" xPosition="678.0" yPosition="325.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Revista" package="questaodiscursiva3enade2014" visibility="public" xPosition="42.0" yPosition="86.0">
+      <Fields>
+        <Field name="titulo" type="String" visibility="public"/>
+        <Field name="ISSN" type="String" visibility="public"/>
+        <Field name="periodicidade" type="String" visibility="public"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="listaArtigo" source="questaodiscursiva3enade2014.Edicao" target="questaodiscursiva3enade2014.Artigo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..*" collectionType="List&lt;Artigo&gt;"/>
+    <HasRelation name="revista" source="questaodiscursiva3enade2014.Edicao" target="questaodiscursiva3enade2014.Revista" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
