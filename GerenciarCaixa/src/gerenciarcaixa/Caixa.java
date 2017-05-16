@@ -11,12 +11,14 @@ public class Caixa {
         }
         return "Valor inválido para depósito";
     }
-    public String sacar(double valor){
+    public String sacar(double valor) throws GerenciarCaixaException{
         if((valor > 0) && (valor <= saldo)){
             saldo-= valor;
             return "Saque efetuado com sucesso";
+        }else{
+            throw new GerenciarCaixaException();
         }
-        return "Valor inválido ou saldo insuficiente";
+        
     }
     public double getSaldo(){
         return saldo;

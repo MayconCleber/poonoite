@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="projetobancoheranca">
+  <ClassDiagramComponents>
+    <Class name="Conta" package="projetobancoheranca" visibility="public" isAbstract="true" xPosition="253.0" yPosition="31.0">
+      <Fields>
+        <Field name="numeroConta" type="int" visibility="private"/>
+        <Field name="nomeCliente" type="String" visibility="private"/>
+        <Field name="saldo" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getNumeroConta" returnType="int" visibility="public"/>
+        <Method name="setNumeroConta" returnType="void" visibility="public">
+          <Argument type="int" name="numeroConta"/>
+        </Method>
+        <Method name="getNomeCliente" returnType="String" visibility="public"/>
+        <Method name="setNomeCliente" returnType="void" visibility="public">
+          <Argument type="String" name="nomeCliente"/>
+        </Method>
+        <Method name="getSaldo" returnType="double" visibility="public"/>
+        <Method name="setSaldo" returnType="void" visibility="public">
+          <Argument type="double" name="saldo"/>
+        </Method>
+        <Method name="depositar" returnType="boolean" visibility="public">
+          <Argument type="double" name="valor"/>
+        </Method>
+        <Method name="sacar" returnType="boolean" visibility="public">
+          <Argument type="double" name="valor"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Corrente" package="projetobancoheranca" visibility="public" xPosition="78.0" yPosition="435.0">
+      <Fields>
+        <Field name="limiteCheque" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getLimiteCheque" returnType="double" visibility="public"/>
+        <Method name="setLimiteCheque" returnType="void" visibility="public">
+          <Argument type="double" name="limiteCheque"/>
+        </Method>
+        <Method name="sacar" returnType="boolean" visibility="public">
+          <Argument type="double" name="valor"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Poupanca" package="projetobancoheranca" visibility="public" xPosition="469.0" yPosition="435.0">
+      <Fields>
+        <Field name="diaAniversario" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getDiaAniversario" returnType="int" visibility="public"/>
+        <Method name="setDiaAniversario" returnType="void" visibility="public">
+          <Argument type="int" name="diaAniversario"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProjetoBancoHeranca" package="projetobancoheranca" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="projetobancoheranca.Poupanca" target="projetobancoheranca.Conta"/>
+    <IsRelation name="is" source="projetobancoheranca.Corrente" target="projetobancoheranca.Conta"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
